@@ -11,6 +11,8 @@ public class Tests
     [Test]
     public void GivenEmptyBasket_WhenCheckoutDone_TotalShouldIsZero()
     {
-        Assert.Fail();
+        var basketTotal = new CheckoutService().GetTotalPrice();
+
+        Assert.That(basketTotal, Is.EqualTo(0));
     }
 }
