@@ -9,7 +9,7 @@ public class Tests
     }
 
     [Test]
-    public void Test1()
+    public void GivenEmptyBasket_WhenCheckoutDone_TotalShouldIsZero()
     {
         Assert.Fail();
     }
