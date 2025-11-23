@@ -5,7 +5,7 @@
         private readonly Dictionary<string, IPricingRule> _prices = new()
         {
             { "A", new MultiBuyRule(50,3,130) },
-            { "B", new DefaultRule(30) },
+            { "B", new MultiBuyRule(30,2,45)  },
             { "C", new DefaultRule(20) },
             { "D", new DefaultRule(15) }
         };
