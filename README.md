@@ -22,12 +22,3 @@ interface ICheckout
     int GetTotalPrice();
 
 }
-
-
-**Instructions**
-
-Implement a class library that satisfies the problem described above. The solution should be test driven.
-
-We're as interested in the process that you go through to develop the code as the end result, so commit early and often so we can see the steps that you go through to arrive at your solution. We want to see a git repository containing your solution, ideally uploaded to your own github account.
-
-If you've not done a kata before, there are some great resources on the web describing the process.
