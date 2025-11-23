@@ -12,6 +12,11 @@
 
         public int GetPrice(string sku)
         {
+            if (!_prices.ContainsKey(sku))
+            {
+                throw new KeyNotFoundException($"SKU {sku} not found");
+            }
+
             return _prices[sku];
         }
     }
