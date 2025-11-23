@@ -15,7 +15,7 @@ public class CheckoutService : ICheckout
         if (_scannedItems.Count == 0)
             return 0;
         else
-            return _scannedItems.Sum(sku => _priceProvider.GetPrice(sku));
+            return _scannedItems.Sum(sku => _priceProvider.GetPriceRule(sku).CalculatePrice(1));
     }
 
     public void Scan(string item)

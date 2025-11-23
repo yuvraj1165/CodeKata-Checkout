@@ -2,15 +2,15 @@
 {
     public class PriceProvider : IPriceProvider
     {
-        private readonly Dictionary<string, int> _prices = new()
+        private readonly Dictionary<string, IPricingRule> _prices = new()
         {
-            { "A", 50 },
-            { "B", 30 },
-            { "C", 20 },
-            { "D", 15 }
+            { "A", new DefaultRule(50) },
+            { "B", new DefaultRule(30) },
+            { "C", new DefaultRule(20) },
+            { "D", new DefaultRule(15) }
         };
 
-        public int GetPrice(string sku)
+        public IPricingRule GetPriceRule(string sku)
         {
             if (!_prices.ContainsKey(sku))
             {

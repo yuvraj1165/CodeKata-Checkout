@@ -2,6 +2,6 @@
 {
     public interface IPriceProvider
     {
-        int GetPrice(string sku);
+        IPricingRule GetPriceRule(string sku);
     }
 }
