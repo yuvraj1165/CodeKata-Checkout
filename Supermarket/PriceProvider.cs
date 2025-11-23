@@ -5,7 +5,8 @@
         private readonly Dictionary<string, int> _prices = new()
         {
             { "A", 50 },
-            { "B", 30 }
+            { "B", 30 },
+            { "C", 20 }
         };
 
         public int GetPrice(string sku)
