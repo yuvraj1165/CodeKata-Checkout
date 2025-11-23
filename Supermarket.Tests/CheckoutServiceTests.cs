@@ -70,4 +70,15 @@ public class Tests
 
         Assert.That(ex.Message, Is.EqualTo("SKU E not found"));
     }
+
+    [Test]
+    public void GivenItemsABCD_WhenCheckoutDone_TotalShouldBe115()
+    {
+        _checkoutService.Scan("A");
+        _checkoutService.Scan("B");
+        _checkoutService.Scan("C");
+        _checkoutService.Scan("D");
+        var basketTotal = _checkoutService.GetTotalPrice();
+        Assert.That(basketTotal, Is.EqualTo(115));
+    }
 }
