@@ -13,7 +13,7 @@ public class CheckoutService : ICheckout
         if (_scannedItems.Count == 0)
             return 0;
         else
-            return 50;
+            return _scannedItems.Count * 50;
     }
 
     public void Scan(string item)
