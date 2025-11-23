@@ -58,4 +58,16 @@ public class Tests
         var basketTotal = _checkoutService.GetTotalPrice();
         Assert.That(basketTotal, Is.EqualTo(15));
     }
+
+    [Test]
+    public void GivenUnknownItem_WhenCheckoutDone_ItShouldThrowError()
+    {
+        var ex = Assert.Throws<KeyNotFoundException>(() =>
+        {
+            _checkoutService.Scan("E");
+            _checkoutService.GetTotalPrice();
+        });
+
+        Assert.That(ex.Message, Is.EqualTo("SKU E not found"));
+    }
 }
