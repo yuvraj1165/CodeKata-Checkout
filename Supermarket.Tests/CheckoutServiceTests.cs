@@ -50,4 +50,12 @@ public class Tests
         var basketTotal = _checkoutService.GetTotalPrice();
         Assert.That(basketTotal, Is.EqualTo(20));
     }
+
+    [Test]
+    public void GivenItemD_WhenCheckoutDone_TotalShouldBe15()
+    {
+        _checkoutService.Scan("D");
+        var basketTotal = _checkoutService.GetTotalPrice();
+        Assert.That(basketTotal, Is.EqualTo(15));
+    }
 }
