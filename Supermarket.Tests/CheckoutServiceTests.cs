@@ -91,4 +91,28 @@ public class Tests
         var basketTotal = _checkoutService.GetTotalPrice();
         Assert.That(basketTotal, Is.EqualTo(130));
     }
+
+    [Test]
+    public void GivenFourItemA_WhenCheckoutDone_TotalShouldBe180()
+    {
+        _checkoutService.Scan("A");
+        _checkoutService.Scan("A");
+        _checkoutService.Scan("A");
+        _checkoutService.Scan("A");
+        var basketTotal = _checkoutService.GetTotalPrice();
+        Assert.That(basketTotal, Is.EqualTo(180));
+    }
+
+    [Test]
+    public void GivenSixItemA_WhenCheckoutDone_TotalShouldBe260()
+    {
+        _checkoutService.Scan("A");
+        _checkoutService.Scan("A");
+        _checkoutService.Scan("A");
+        _checkoutService.Scan("A");
+        _checkoutService.Scan("A");
+        _checkoutService.Scan("A");
+        var basketTotal = _checkoutService.GetTotalPrice();
+        Assert.That(basketTotal, Is.EqualTo(260));
+    }
 }
