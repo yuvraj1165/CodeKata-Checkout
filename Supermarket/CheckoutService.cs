@@ -2,17 +2,22 @@
 
 public class CheckoutService : ICheckout
 {
+    public List<string> _scannedItems { get; set; }
     public CheckoutService()
     {
+        _scannedItems = new List<string>();
     }
 
     public int GetTotalPrice()
     {
-        return 0;
+        if (_scannedItems.Count == 0)
+            return 0;
+        else
+            return 50;
     }
 
     public void Scan(string item)
     {
-        throw new NotImplementedException();
+        _scannedItems.Add(item);
     }
 }
