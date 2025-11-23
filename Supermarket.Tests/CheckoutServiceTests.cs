@@ -1,4 +1,5 @@
 using Supermarket.Checkout;
+using Supermarket.Pricing;
 
 namespace Supermarket.Tests;
 
@@ -10,7 +11,7 @@ public class Tests
     [SetUp]
     public void Setup()
     {
-        _checkoutService = new CheckoutService();
+        _checkoutService = new CheckoutService(new PriceProvider());
     }
 
     [Test]

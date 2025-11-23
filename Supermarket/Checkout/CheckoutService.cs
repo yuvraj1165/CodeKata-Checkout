@@ -7,11 +7,11 @@ public class CheckoutService : ICheckout
     private readonly IPriceProvider _priceProvider;
     public List<string> _scannedItems { get; set; }
     public Dictionary<string, int> _uniqueScannedItems { get; set; }
-    public CheckoutService()
+    public CheckoutService(IPriceProvider priceProvider)
     {
         _scannedItems = new List<string>();
         _uniqueScannedItems = new Dictionary<string, int>();
-        _priceProvider = new PriceProvider();
+        _priceProvider = priceProvider;
     }
 
     public int GetTotalPrice()
