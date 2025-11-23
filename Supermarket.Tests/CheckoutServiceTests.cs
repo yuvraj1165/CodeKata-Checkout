@@ -1,3 +1,5 @@
+using Supermarket.Checkout;
+
 namespace Supermarket.Tests;
 
 [TestFixture]

@@ -1,4 +1,4 @@
-﻿namespace Supermarket
+﻿namespace Supermarket.Pricing
 {
     public interface IPricingRule
     {

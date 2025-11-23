@@ -1,4 +1,6 @@
-﻿namespace Supermarket;
+﻿using Supermarket.Pricing;
+
+namespace Supermarket.Checkout;
 
 public class CheckoutService : ICheckout
 {

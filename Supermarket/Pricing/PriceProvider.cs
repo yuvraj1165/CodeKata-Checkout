@@ -1,4 +1,4 @@
-﻿namespace Supermarket
+﻿namespace Supermarket.Pricing
 {
     public class PriceProvider : IPriceProvider
     {
@@ -13,9 +13,7 @@
         public IPricingRule GetPriceRule(string sku)
         {
             if (!_prices.ContainsKey(sku))
-            {
                 throw new KeyNotFoundException($"SKU {sku} not found");
-            }
 
             return _prices[sku];
         }
